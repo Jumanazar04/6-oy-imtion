@@ -30,8 +30,6 @@ const SingleProduct = () => {
     if (!data) {
         return <div className='.container text-center my-4 font-bold text-3xl'>Loading...</div>;
     }
-
-    
     return (
         <div className='container mx-auto my-12 w-full h-auto flex justify-center'>
             

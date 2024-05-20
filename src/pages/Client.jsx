@@ -13,8 +13,10 @@ const Client = () => {
             console.log(error);
         }
     }
-    console.log();
     getData()
+    if(!cards){
+        return <div className='mx-auto text-3xl font-bold my-5'>Loading...</div>
+    }
     return (
         <div className='container px-8 mx-auto flex flex-wrap gap-4 justify-between'>
             {cards.map((data) => (
