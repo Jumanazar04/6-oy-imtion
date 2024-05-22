@@ -7,7 +7,7 @@ const Layout = () => {
         
         const getToken = localStorage.getItem("auth-token")
         if (!getToken) {
-            navigate('/')
+            navigate('/admin')
         }
     }, [navigate]);
     return (
