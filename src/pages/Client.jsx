@@ -1,19 +1,11 @@
-import axios from 'axios';
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import UseGetData from './useGetData';
 
 const Client = () => {
-    const [cards, setCards] = useState([]);
-    
-    async function getData(){
-        try {
-            const response = await axios.get("https://ecommerce-backend-fawn-eight.vercel.app/api/products")
-            setCards(response.data)
-        } catch (error) {
-            console.log(error);
-        }
-    }
-    getData()
+
+    const cards = UseGetData("products")
+
     if(!cards){
         return <div className='mx-auto text-3xl font-bold my-5'>Loading...</div>
     }
