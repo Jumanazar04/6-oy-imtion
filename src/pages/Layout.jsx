@@ -1,7 +1,9 @@
 import React, {  } from 'react';
 import { NavLink, Outlet,  } from 'react-router-dom';
+import useAuth from './useAuth'
 
-const Layout = () => {
+function Layout() {
+    useAuth();
     return (
         <>
         <nav className='container mx-auto flex border justify-center gap-20 bg-gray-50 py-4 text-2xl font-bold mb-4'>

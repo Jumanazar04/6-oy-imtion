@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+
 const Admin = () => {
     const [title, setTitle] = useState('');
     const [subtitle, setSubtitle] = useState('');
@@ -13,7 +14,6 @@ const Admin = () => {
     const [color, setColor] = useState('');
 
     const navigate = useNavigate()
-
     const token = localStorage.getItem("auth-token")
 
     async function handleSubmit(){
