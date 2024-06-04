@@ -19,4 +19,4 @@ const useFetch = (path) => {
     return cards
 }
 
-export default useFetch;
+export default (useFetch);
