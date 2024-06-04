@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import UseGetData from './useGetData';
+import useFetch from '../hooks/useFetch';
 
-const Client = () => {
 
-    const cards = UseGetData("products")
+function Client(){
+
+    const cards = useFetch("products")
 
     if(!cards){
         return <div className='mx-auto text-3xl font-bold my-5'>Loading...</div>

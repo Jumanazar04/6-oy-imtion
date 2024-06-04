@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import useMobile from '../hooks/useMobile';
 
 
 const Admin = () => {
@@ -15,6 +16,8 @@ const Admin = () => {
 
     const navigate = useNavigate()
     const token = localStorage.getItem("auth-token")
+
+    const isMobile = useMobile();
 
     async function handleSubmit(){
         try {
@@ -47,7 +50,7 @@ const Admin = () => {
     return (
         <div className='container'>
             <form  action="#" className='w-2/3 h-auto flex flex-col gap-3 border mx-auto p-6 my-8'>
-                <h1 className='text-3xl font-bold text-center'>Post categories</h1>
+                <h1 className='text-3xl font-bold text-center'>Post categories {isMobile ? "Mobil qurilma" : "Desktop qurilma"}</h1>
                 <label htmlFor="title">
                     Product title: <br />
                     <input 
